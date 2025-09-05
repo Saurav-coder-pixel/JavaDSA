@@ -5,6 +5,10 @@ public class Student {
     int rollNo;
     double percentage;
 
+    final String schoolName="ABC";
+    private int noOfStudent;
+
+
     //Default constructor
     public Student(){
 
@@ -14,8 +18,12 @@ public class Student {
         this.name= name;
         this.rollNo= rollNo;
         this.percentage= percentage;
+        noOfStudent++;
     }
 
+    public int getNoOfStudent(){
+        return noOfStudent;
+    }
 
     public int getRollNo() {
         return rollNo;
