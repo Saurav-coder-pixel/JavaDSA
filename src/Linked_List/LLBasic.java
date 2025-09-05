@@ -10,6 +10,15 @@ public class LLBasic {
         }
     }
 
+    public static void insertAtEnd(Node head, int val){
+        Node temp= new Node(val);
+        Node t= head;
+        while (t.next!= null){
+            t= t.next;
+        }
+        t.next= temp;
+    }
+
     public static void display(Node head){
         Node temp= head;
         while(temp!= null){
@@ -32,6 +41,15 @@ public class LLBasic {
         System.out.print(head.data+" ");
     }
 
+    public static int length(Node head){
+        int count= 0;
+        while(head!= null){
+            count++;
+            head= head.next;
+        }
+        return count;
+    }
+
     public static void main(String[] args){
         Node a= new Node(1);
         Node b= new Node(3);
@@ -49,5 +67,9 @@ public class LLBasic {
         displayR(a);
         System.out.println();
         displayRev(a);
+        System.out.println();
+        System.out.println(length(a));;
+        insertAtEnd(a,10);
+        display(a);
     }
 }
