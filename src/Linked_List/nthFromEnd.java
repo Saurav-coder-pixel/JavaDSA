@@ -32,6 +32,17 @@ public class nthFromEnd {
         return slow;
     }
 
+    public static Node middleNode(Node head){
+        Node slow = head;
+        Node fast = head;
+        while (fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+
     public static class Node{
         int data;
         Node next;
@@ -55,5 +66,6 @@ public class nthFromEnd {
 
         Node q= NthNodeSF(a,3);
         System.out.println(q.data);
+        System.out.println(middleNode(a));
     }
 }
