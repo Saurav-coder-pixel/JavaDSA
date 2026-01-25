@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Scanner;
+
 public class Array4 {
     public void SwapUsingSumAndDiif(int a, int b){
         System.out.println(a +" "+ b);
@@ -54,14 +56,40 @@ public class Array4 {
         }
     }
 
+    public int[] FrequencyArr(int[] arr){
+        int[] feqArr= new int[100000];
+
+        for(int i=0; i<arr.length; i++){
+            feqArr[arr[i]]++;
+        }
+        return feqArr;
+    }
+
     public static void main(String[] args){
         Array4 obj= new Array4();
 //        obj.SwapUsingSumAndDiif(4,5);
 
         int[] arr={1,2,3,4,5,6,7};
+        int[] arr2={5,6,5,400,560,1000,600};
 //        obj.ReverseAnArray(arr);
 
-        obj.RotateArrInPlace(arr, 5);
+//        obj.RotateArrInPlace(arr, 5);
 
+        int[] freq= obj.FrequencyArr(arr2);
+
+        System.out.println("Enter the number of queries");
+        Scanner sc= new Scanner(System.in);
+        int q= sc.nextInt();
+
+        System.out.println("Enter the numbers to be search");
+        while(q>0){
+            int x= sc.nextInt();
+            if(freq[x]>0){
+                System.out.println("true");
+            }else{
+                System.out.println("false");
+            }
+            q--;
+        }
     }
 }
