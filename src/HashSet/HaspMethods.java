@@ -12,6 +12,8 @@ public class HaspMethods {
         mp.put("Ram", 19);
         mp.put("Sam", 20);
         mp.put("Sohan", 18);
+
+
         System.out.println(mp.get("Rahul"));
         System.out.println(mp.get("A"));
         mp.put("Ram", 22);
